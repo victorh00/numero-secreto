@@ -63,3 +63,20 @@ Co-authored-by: OUTRO-NOME <outro@email.com>"
 
 # atualizar repo local com atualizações do repo remoto
 git pull (equivalente a git fetch + git merge)
+
+# conflito de merge
+ocorre em pull, push, merge ou rebase quando foram feitas alterações diferentes na branch local e na branch remota
+o git injeta marcadores no código:
+	<<<< current change é a mudança feita localmente
+	>>>> incoming change é a mudança remota que foi alvo de um pull
+	==== indica que as linhas são iguais
+resolver manualmente:
+	apagar os indicadores e as linhas duplicadas, deixando apenas a mudança que será mantida. 
+	é necessário outro commit para registrar a resolução do conflito.
+resolver via merge editor:
+	tela dividida em incoming (remoto), current (local) e result.
+	escolher uma das opções de resolução acima de cada linha marcada como conflituosa.
+	dar commit e push.
+	
+	
+	
