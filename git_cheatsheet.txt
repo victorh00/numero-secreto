@@ -1,0 +1,65 @@
+git cheatsheet
+
+# se identificar:
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@exemplo.com"
+
+# converter diretório em repositório git / inicializar git
+git init
+
+#descobrir nome da branch atual
+git branch
+
+# renomear branch atual de maneira forçada
+git branch -M <nome>
+e.g. após init, git branch -M main
+
+# adicionar mudanças ao índice / staging area. incluir arquivos nos commits.
+git add .
+ou
+git add <caminho/do/diretorio-ou-arquivo>
+
+# fazer commit com mensagem
+git commit -m <msg>
+
+# linkar repositório local com o remoto
+git remote add origin <link https ou ssh>
+	# listar repos remotos:		git remote -v
+	# remover remoto: 			git remote remove origin
+	# alterar url: 				git remote set-url origin <link>
+	# renomear:					git remote rename origin novo-origin
+	# obs.: ao realizer um git clone, a conexão com o remote já é feita tbm
+
+# criar chave ssh para o github
+ssh-keygen -t ed25519 -C "email"
+
+# status dos repos local e remoto 
+git status
+
+# clonar projeto (similar a um init, porém de um remote que já existe)
+git clone <link>
+obs.: ao realizer um git clone, a conexão com o remote já é feita tbm
+
+# histórico de commits
+git log
+
+# alterar mensagem do último commit
+git commit --amend
+git push --force
+
+# alterar mensagem de commit anteriores (tbc se tá certo)
+git rebase -i HEAD~N
+git push --force
+
+# adicionar colaboradores
+pág do repo no github > settings > collaborators > add
+
+#adicionar co-autores ao commit
+$ git commit -m "Adicionar nova funcionalidade.
+>
+>
+Co-authored-by: NOME <nome@email.com>
+Co-authored-by: OUTRO-NOME <outro@email.com>"
+
+# atualizar repo local com atualizações do repo remoto
+git pull (equivalente a git fetch + git merge)
