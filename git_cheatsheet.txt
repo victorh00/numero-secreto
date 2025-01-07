@@ -43,8 +43,10 @@ obs.: ao realizer um git clone, a conexão com o remote já é feita tbm
 # histórico de commits
 git log
 
-# alterar mensagem do último commit
-git commit --amend
+# alterar mensagem do último commit (a evitar se commit já for público)
+git commit --amend (vai abrir editor de texto. edita, salva e fecha)
+ou
+git commit --amend -m "texto correto"
 git push --force
 
 # alterar mensagem de commit anteriores (tbc se tá certo)
@@ -78,5 +80,7 @@ resolver via merge editor:
 	escolher uma das opções de resolução acima de cada linha marcada como conflituosa.
 	dar commit e push.
 	
-	
+# remover commit (a evitar se commit já for público)
+	usar git log para pegar hash do commit de destino. se quero voltar um commit, devo pegar o commit anterior a ele.
+	git reset --hard <hash de destino>
 	
