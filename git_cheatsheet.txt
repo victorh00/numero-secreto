@@ -83,4 +83,11 @@ resolver via merge editor:
 # remover commit (a evitar se commit já for público)
 	usar git log para pegar hash do commit de destino. se quero voltar um commit, devo pegar o commit anterior a ele.
 	git reset --hard <hash de destino>
+
+# ignorar arquivos no versionamento
+	criar arquivo .gitignore
+	diretório: caminho/da/pasta/
+	arquivo: file.txt
+	conjunto de arquivos: *.png, *_da_silva.txt
 	
+
