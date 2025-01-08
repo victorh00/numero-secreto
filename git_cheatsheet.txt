@@ -89,5 +89,10 @@ resolver via merge editor:
 	diretório: caminho/da/pasta/
 	arquivo: file.txt
 	conjunto de arquivos: *.png, *_da_silva.txt
-	
+	# tbm é possível criar arquivos específicos para cada linguagem: gitignore.io
+
+# ferramenta para compartilhar code snippets via url: gist
+	é possível criar um gist para compartilhar trechos de arquivos diferentes
+
+
 
